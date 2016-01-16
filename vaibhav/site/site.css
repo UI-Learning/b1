@@ -1,0 +1,83 @@
+.top{
+  font-family: Verdana, Geneva, sans-serif;
+}
+.header {
+background-color:black;
+color:white;
+padding: 20px;
+}
+
+.face {
+  background-color:blue;
+padding: 200px;
+  color:white;
+}
+.face2 {
+  background-color:white;
+  color:grey;
+
+}
+a.face2{
+  color:black;
+}
+.face3{
+  background-color:grey;
+  color:white;
+  padding: 50px;
+}
+.face4{
+  background-color:silver;
+  color:grey;
+  padding: 50px;
+}
+.face5 {
+  background-color:white;
+  color:grey;
+  padding: 50px;
+}
+.face6{
+  background-color:silver;
+  color:white;
+  padding: 50px;
+}
+.face7{
+   line-height:30px;
+   background-color:white;
+   height:500;
+   width:500;
+}
+a.link1{
+  text-decoration: none;
+  color:white;
+}
+a.link1:hover{text-decoration: none; color:blue;  background-color: white;}
+a.link0{
+  color:grey;
+  text-decoration: none;
+}
+a.link0:hover, a.link0:active {text-decoration: underline;}
+a.link2{
+  color: grey;
+  text-decoration: none; // changed from text-decoration:underline
+}
+a.link3{
+  color:black;
+  text-decoration: none;
+}
+a.link2:hover, a.link2:active {text-decoration: underline;}
+a.link3:hover, a.link3:active {text-decoration: underline; color:blue;}
+
+.vertical-line{
+  border: 1px;
+height: 100%;
+color:black;
+}
+.face8{
+  background-color:black;
+  color:white;
+  padding: 60px;
+}
+ul li {
+color:white;
+    display:inline;
+  }
