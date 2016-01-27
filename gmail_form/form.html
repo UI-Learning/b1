@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head><title>gmail validation</title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="C:\Users\Vaibhav\Desktop\bootstrap-3.3.6-dist\bootstrap-3.3.6-dist\css\bootstrap.min.css" >
+  </head>
+<body>
+  <div class="row" style="background-color:silver"><!--div for firstrow-->
+    <div class="col-md-12" >Google </div>
+  </div><!--div close for first row-->
+    <div class="row" style="background-color:white"><!--div for secondrow-->
+      <div class="col-md-12" ><h1>Create your Google Account</h1> </div>
+    </div><!--div close for secondrow-->
+      <div class="row">
+        <div class="col-md-7" > </div>
+        <div class="col-md-4" style="background-color:silver"><!--div for inner form-->
+
+<form id="myform" class="form-inline" role="form" data-toggle="validator" >
+  <div class="form-group"><!--div for name-->
+    <label for="Name">Name</label><br>
+    <input type="text"  class="form-control" id="firstname" placeholder="firstname">
+    <input type="text" class="form-control" id="lastname" placeholder="lastname"><br>
+  </div><br><!--div close for name-->
+  <div class="form-group"><!--div for username-->
+    <label for="username">choose your username</label><br>
+    <input type="email" data-toggle="popover" data-content="You can use letters numbers and periods" class="form-control" id="username" placeholder="jane.doe@example.com"  required>
+  </div><br><!--div close for username-->
+  <div class="form-group"><!--div for password-->
+    <label for="password1" class="control-label">Create a Password</label><br>
+    <input type="password" id="password1" data-minlength="6" data-toggle="popover" data-content="Use atleast 8 characters." class="form-control"   placeholder="Password" required><br>
+    <label for="password2">Confirm your Password</label><br>
+    <input type="password" class="form-control" id="Password2" data-match="#password1" data-match-error="Whoops, these don't match" placeholder="confirm" required>
+  </div><br><!--div close for password-->
+  <div class="form-group"><!--div for Birthday-->
+    <label for="Birthday">Birthday</label><br>
+    <select class="form-control">
+    <option value="January">January</option>
+    <option value="February">February</option>
+    <option value="March">March</option>
+    <option value="April">April</option>
+    <option value="May">May</option>
+    <option value="June">June</option>
+    <option value="July">July</option>
+    <option value="August">August</option>
+    <option value="September">September</option>
+    <option value="October">October</option>
+    <option value="November">November</option>
+    <option value="December">December</option>
+  </select>
+    <input type="text" class="form-control" id="Day" placeholder="Day">
+    <input type="text" class="form-control" id="year" placeholder="year">
+    </div><br><!--div close for Birthday-->
+  <div class="form-group"><!--div for Gender-->
+    <label for="Gender">Gender</label><br>
+    <select class="form-control">
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Other">Other</option>
+    </select>
+  </div><br><!--div close for Gender-->
+  <div class="form-group"><!--div for Mobile Phone-->
+    <label for="Mobile Phone">Mobile Phone</label><br>
+  </div><br><!--div close for Mobile Phone-->
+    <label for="emailcurrent">Your current email address </label><br>
+    <input type="email" class="form-control" data-toggle="popover" data-content="We will use this address for things like keeping your account secure." id="emailcurrent" placeholder="jane.doe@example.com" ><br>
+  <div class="checkbox">
+    <label for="exampleInputEmail2"><b>Prove yourn't a robot</b></label><br>
+    <label>
+    <input type="checkbox" value="">
+    Skip this verification(Phone verification may be required)
+    </label>
+  </div><br>
+  <div class="container" style="background-color:white"><!-- div for captcha-->
+    <img id="captcha" src="C:\Users\Vaibhav\Desktop\gmail_form\captcha.php" alt="CAPTCHA Image" />
+         <a href="#" onclick="document.getElementById('captcha').src = 'C:\Users\Vaibhav\Desktop\gmail_form\captcha.php' + Math.random(); return false" class="btn btn-info btn-sm">Show a Different Image</a><br/>
+         <div class="form-group" style="margin-top: 10px;">
+           <input type="text" class="form-control" name="captcha_code" id="captcha_code" placeholder="For security, please enter the code displayed in the box." />
+           <span class="help-block" style="display: none;">Please enter the code displayed within the image.</span>
+         </div>
+
+  <!--  <label for="exampleInputEmail2"><b>Type the text</b></label><br>
+    <input type="text" class="form-control" id="year" placeholder="year"><br>-->
+  </div><!--End for captcha-->
+  <div class="form-group">
+  <label for="exampleInputEmail2"><b>Location</b></label><br>
+  </div>
+  <div class="checkbox">
+  <label>
+  <input type="checkbox" value="">
+  I Agree to the Google's terms of service and privacy
+  </label>
+  </div><!--div close for checkbox-->
+  <button type="submit" class="btn btn-default">Sign Up</button>
+  </form>
+  </div><!--div close for innerform-->
+  </div><!--div close outerform-->
+  <script src="C:\Users\Vaibhav\Desktop\demo_jquery\javascripts\jquery-1.11.3.min.js"></script>
+
+  <script src="C:\Users\Vaibhav\Desktop\bootstrap-3.3.6-dist\bootstrap-3.3.6-dist\js\bootstrap.min.js"></script>
+  <!-- <script src="C:\Users\Vaibhav\Desktop\BootstrapFormHelpers-master\js\bootstrap-formhelpers-number.js"></script> -->
+  <!--<script src="C:\Users\Vaibhav\Desktop\BootstrapFormHelpers-master\js\bootstrap-formhelpers-countries.js"></script>-->
+  <!--<script src="C:\Users\Vaibhav\Desktop\BootstrapFormHelpers-master\js\bootstrap-formhelpers-phone.js"></script>-->
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
+  <script >
+  $(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+
+});
+  </script>
+  </body>
+</html>
