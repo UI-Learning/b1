@@ -1,0 +1,53 @@
+<html>
+<head>
+</head>
+<body>
+  <div class="test-class">
+    <ul class="first-ul">
+      <li> 1 </li>
+      <li> 2 </li>
+      <li> 3 </li>
+    </ul>
+    <ul class="second-ul">
+      <li> 1 </li>
+      <li> 2 </li>
+      <li> 3 </li>
+    </ul>
+    <div class="inner-level-1">
+      <div class="inner-level-2">
+        click this
+      </div>
+    </div>
+  </div>
+  <script src="src/jquery-1.12.0.js"></script>
+  <script>
+
+    $(document).ready(function(){
+      function hw(){
+        var $x = $('.test-class'),
+          $firstli = $('.test-class .first-ul li:nth-child(1)');
+          $secondLI = $('.test-class .first-ul li:nth-child(2)');
+          a = 10;
+        $secondLI.text("Hello World!");
+
+        $secondLI.on('custom.event', addToCart);
+
+        function addToCart(e) {
+          $firstli.text(++a);
+        }
+        $firstli.on('click', function (e) {
+          console.log(e);
+            $secondLI.off('custom.event', addToCart);
+        })
+
+        $('.test-class').find('.second-ul').find('li').text("Hello World!");
+      }
+      hw();
+        $('.inner-level-2').on("click", function () {
+          // $('.test-class .first-ul li:nth-child(1)');.text("Hi Vaibhav!");
+          $('.test-class .first-ul li:nth-child(2)').trigger('custom.event');
+        })
+    })
+  </script>
+</body>
+</html>

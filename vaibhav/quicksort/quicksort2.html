@@ -1,7 +1,7 @@
 <html>
 <body>
 <script type="text/javascript">
-var items = [4, 2, 6, 5, 3, 9];
+var items = [4, 2, 3,6, 5, 3, 6,2, 9];
 function swap(items, firstIndex, secondIndex){
     var temp = items[firstIndex];
     items[firstIndex] = items[secondIndex];
@@ -57,33 +57,8 @@ function quickSort(items, left, right) {
 
 // first call
 var result = quickSort(items, 0, items.length - 1);
-function quickSort(items, left, right) {
 
-    var index;
-
-    if (items.length > 1) {
-
-        left = typeof left != "number" ? 0 : left;
-        right = typeof right != "number" ? items.length - 1 : right;
-
-        index = partition(items, left, right);
-
-        if (left < index - 1) {
-            quickSort(items, left, index - 1);
-        }
-
-        if (index < right) {
-            quickSort(items, index, right);
-        }
-
-    }
-
-    return items;
-}
-
-// first call
-var result = quickSort(items);
-document.writeln(items);
+document.writeln(result);
 
 </script>
 </body>

@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
 </head>
 <body>
-  
+
 
 <form name="myform">
   <div class="form-group">
@@ -16,18 +16,22 @@
   </div>
 
 
-  <button type="submit" class="btn btn-default" onclick="A()">Submit</button>
+  <button type="submit" class="btn btn-default" onClick="return A()" >Submit</button>
 </form>
+
+<script src="https://code.jquery.com/jquery-2.2.0.js" charset="utf-8"></script>
+
+
 <script type="text/javascript">
 function A()
 {
-var x=document.myform.email1.value;
-if(x=="")
+var x=$('#exampleInputEmail1').val();
+if(x==""){
 document.writeln("Enter Email id ");
-else
-
+}else {
 document.writeln("Email id is correct");
-
+}
+return false;
 }
 </script>
 </body>
