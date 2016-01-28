@@ -1,0 +1,51 @@
+<html>
+<head>
+</head>
+<body>
+  <div class="test-class">
+
+  </div>
+  <script src="/jquery/src/jquery-1.12.0.js"></script>
+  <script>
+
+    $(document).ready(function(){
+      function callAjax(userName) {
+        return $.ajax({
+            method: "POST",
+            url: "response.json",
+            data: { name: userName},
+
+          });
+      }
+
+      callAjax("Nikesh").then(
+      function (msg) {
+          $('.inner-level-2').text(msg);
+      },
+      function () {
+          console.log("this is error for Nikesh");
+      });
+
+
+
+      callAjax("Vaibhav").done(function (msg) {
+          $('.inner-level-3').text(msg);
+      }).error(function () {
+          console.log("this is error for Vaibhav");
+      });
+      $table = $("<table class='table'></table>");
+      //loop start
+      var obj = {"name": "nikesh", "branch": "CSE"}
+      $tr = $("<tr></tr>");
+      $tr.append("<td>" + obj.name + "</td>");
+      $tr.append("<td>" + obj.branch + "</td>");
+      $table.append($tr);
+      //loop end
+      $(".test-class").html($table);
+
+
+
+    })
+  </script>
+</body>
+</html>
