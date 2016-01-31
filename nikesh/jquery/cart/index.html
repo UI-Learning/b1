@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <!-- Fixed navbar -->
+   <nav class="navbar navbar-default">
+     <div class="container">
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+           <span class="sr-only">Toggle navigation</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="#">Project name</a>
+       </div>
+       <div id="navbar" class="navbar-collapse collapse">
+         <ul class="nav navbar-nav">
+           <li class="active"><a href="#">Home</a></li>
+           <li><a href="#about">dresses</a></li>
+           <li><a href="#contact">shoes</a></li>
+           <!-- <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+             <ul class="dropdown-menu">
+               <li><a href="#">Action</a></li>
+               <li><a href="#">Another action</a></li>
+               <li><a href="#">Something else here</a></li>
+               <li role="separator" class="divider"></li>
+               <li class="dropdown-header">Nav header</li>
+               <li><a href="#">Separated link</a></li>
+               <li><a href="#">One more separated link</a></li>
+             </ul>
+           </li> -->
+         </ul>
+         <ul class="nav navbar-nav navbar-right">
+           <li><a href="../navbar/">My Account</a></li>
+           <li><a href="#"  class="js-cart">cart<span class="js-cart-count"> </span></a></li>
+         </ul>
+       </div><!--/.nav-collapse -->
+     </div>
+   </nav>
+
+   <div class="container">
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row js-products">
+
+            </div>
+            <div class="row js-cart-products hide">
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- /container -->
+
+    <div class="product-template hide">
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="http://cdn.tobi.com/files/images/1506/60542/86936/women/1/280x420.jpg?1454086474" class="js_product_image" alt="product 1" width="300">
+          <div class="caption">
+            <h3 class="js_product_name">Product 1</h3>
+            <p class="js_short_desc">This example is a quick exercise to illustrate how the default</p>
+            <span class="price js_product_price"  style="text-decoration: line-through;color:red"></span>
+            <span class="discounted-price js_product_discount_price"></span>
+            <p><a href="#" class="btn btn-primary js_product_add_to_cart" role="button">Add To Cart</a> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product-cart-template hide">
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="http://cdn.tobi.com/files/images/1506/60542/86936/women/1/280x420.jpg?1454086474" class="js_product_image" alt="product 1" width="300">
+            <div class="caption">
+              <h3 class="js_product_name">Product 1</h3>
+              <p class="js_short_desc">This example is a quick exercise to illustrate how the default</p>
+              <span class="price js_product_price"  style="text-decoration: line-through;color:red"></span>
+              <span class="discounted-price js_product_discount_price"></span>
+              <p><a href="#" class="btn btn-primary js_product_add_to_cart" role="button">Add To Cart</a> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="javascript/jquery-1.12.0.js"></script>
+    <script src="javascript/bootstrap/bootstrap.js" charset="utf-8"></script>
+    <script src="javascript/list.js"></script>
+  </body>
+</html>

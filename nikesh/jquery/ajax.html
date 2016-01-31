@@ -33,13 +33,19 @@
       }).error(function () {
           console.log("this is error for Vaibhav");
       });
+
       $table = $("<table class='table'></table>");
       //loop start
+      data.forEach(function(obj, index){
+        $tr = $("<tr></tr>");
+        Object.keys(obj).forEach(function (key, keyIndex) {
+          $tr.append("<td>" + obj[key] + "</td>");
+        })
+        $table.append($tr);
+      })
       var obj = {"name": "nikesh", "branch": "CSE"}
-      $tr = $("<tr></tr>");
-      $tr.append("<td>" + obj.name + "</td>");
-      $tr.append("<td>" + obj.branch + "</td>");
-      $table.append($tr);
+      obj.name
+      obj["name"]
       //loop end
       $(".test-class").html($table);
 
